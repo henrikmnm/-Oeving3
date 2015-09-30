@@ -13,9 +13,12 @@ public class routeFinder {
     Node start;
     Node goal;
 
-    //Empty constructor for accessing methods.
+    // Empty constructor for accessing methods.
     public routeFinder(){
     }
+
+
+    
 
 
     // Method for reading a file and creating a scanner object on this file.
@@ -31,6 +34,7 @@ public class routeFinder {
         return null;
     }
 
+    // Initializes the board and recognizes the start and goal nodes and places these in the corresponding variables.
     public void buildBoard(Scanner scanner){
         String currentLine = "";
         int counter = 0;
@@ -54,6 +58,7 @@ public class routeFinder {
             counter++;
         }
     }
+    // Simple toString-method.
     public String boardToString(){
         String boardString = "";
         for (int i = 0; i < board.size(); i++) {
@@ -67,7 +72,9 @@ public class routeFinder {
         }
         return boardString;
     }
-    public String coordinatesToString(){
+
+    // Prints the coordinates of each node relative to the goal-node aka. the H-cost of each node.
+    public String hCostToString(){
         String coordString= "";
         for (int i = 0; i < this.board.size(); i++) {
             coordString += "|";
@@ -82,6 +89,8 @@ public class routeFinder {
         }
         return coordString;
     }
+
+    // Calculates the h-cost of a node and returns it in a placeholder coordinates-object.
     public Coordinates returnH_cost(Node node){
         int xDiff;
         int yDiff;
@@ -98,7 +107,7 @@ public class routeFinder {
     public static void main(String args[]){
         routeFinder test = new routeFinder();
         test.buildBoard(test.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-1-1.txt"));
-        System.out.println(test.coordinatesToString());
+        System.out.println(test.hCostToString());
 
     }
 

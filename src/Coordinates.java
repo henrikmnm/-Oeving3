@@ -1,5 +1,7 @@
 /**
  * Created by henrikmnm on 29.09.15.
+ *
+ * Simple class to hold x and y coordinates.
  */
 public class Coordinates {
 

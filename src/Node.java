@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 /**
  * Created by henrikmnm on 25.09.15.
+ *
+ *
+ * Class to provide a Node-interface.
  */
 public class Node {
 
@@ -14,7 +17,29 @@ public class Node {
     private int x;
     private int y;
     private char boardchar;
-    Node parent;
+    private Node parent;
+    private ArrayList<Node> children = new ArrayList<Node>();
+
+    public Node (char c, int x, int y){
+
+        this.boardchar = c;
+        this.x = x;
+        this.y = y;
+
+        if (c == '.'){
+            this.passable = true;
+        }
+        else if (c == 'A'){
+            this.isStart = true;
+        }
+        else if (c == 'B'){
+            this.isGoal = true;
+        }
+        else if (c == '#'){
+            this.passable = false;
+        }
+
+    }
 
 
     public boolean isStart() {
@@ -49,26 +74,6 @@ public class Node {
         this.y = y;
     }
 
-    public Node (char c, int x, int y){
-        this.boardchar = c;
-        this.x = x;
-        this.y = y;
-
-        if (c == '.'){
-            this.passable = true;
-        }
-        else if (c == 'A'){
-            this.isStart = true;
-        }
-        else if (c == 'B'){
-            this.isGoal = true;
-        }
-        else if (c == '#'){
-            this.passable = false;
-        }
-
-    }
-
     public void setPassable(boolean passable){
         this.passable = passable;
     }
@@ -101,6 +106,7 @@ public class Node {
     public boolean getPassable(){
         return this.passable;
     }
+
     public Node getParent() {
         return parent;
     }
@@ -108,7 +114,20 @@ public class Node {
     public void setParent(Node parent) {
         this.parent = parent;
     }
+
     public String toString(){
         return this.boardchar+"";
+    }
+
+    public ArrayList<Node> getChildren() {
+        return children;
+    }
+
+    public void setChildren(ArrayList<Node> children) {
+        this.children = children;
+    }
+
+    public void addChild(Node node){
+        this.children.add(node);
     }
 }
