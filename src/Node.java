@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  * Class to provide a Node-interface.
  */
-public class Node {
+public class Node implements Comparable<Node>{
 
     private boolean passable;
     private boolean isStart = false;
@@ -42,40 +42,12 @@ public class Node {
     }
 
 
-    public boolean isStart() {
-        return isStart;
-    }
-
-    public void setIsStart(boolean isStart) {
-        this.isStart = isStart;
-    }
-
-    public boolean isGoal() {
-        return isGoal;
-    }
-
-    public void setIsGoal(boolean isGoal) {
-        this.isGoal = isGoal;
-    }
-
     public int getX() {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
     public int getY() {
         return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public void setPassable(boolean passable){
-        this.passable = passable;
     }
 
     public int getH_cost() {
@@ -99,8 +71,8 @@ public class Node {
         return f_cost;
     }
 
-    public void setF_cost(int f_cost) {
-        this.f_cost = f_cost;
+    public void setF_cost() {
+        this.f_cost = this.h_cost + this.g_cost;
     }
 
     public boolean getPassable(){
@@ -123,11 +95,18 @@ public class Node {
         return children;
     }
 
-    public void setChildren(ArrayList<Node> children) {
-        this.children = children;
+    public boolean getIsGoal(){
+        return this.isGoal;
     }
+
 
     public void addChild(Node node){
         this.children.add(node);
+    }
+
+
+    @Override
+    public int compareTo(Node o) {
+        return this.f_cost - o.getF_cost();
     }
 }
