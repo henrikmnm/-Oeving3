@@ -126,6 +126,10 @@ public class Node implements Comparable<Node>{
         this.boardchar = c;
     }
 
+    public char getBoardchar(){
+        return this.boardchar;
+    }
+
     public boolean getIsGoal(){
         return this.isGoal;
     }

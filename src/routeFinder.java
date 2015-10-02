@@ -242,13 +242,15 @@ public class routeFinder {
 
     }
 
+    public ArrayList<ArrayList<Node>> getBoard(){
+        return this.board;
+    }
 
 
 
 
 
-
-    public static void main(String args[]){
+/*    public static void main(String args[]){
         routeFinder test = new routeFinder();
         test.buildBoard(test.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-2-4.txt"));
         test.setHcost();
@@ -257,7 +259,7 @@ public class routeFinder {
         System.out.println(test.boardToString());
 
 
-    }
+    }*/
 
 
 
