@@ -19,32 +19,91 @@ public class routeFinder {
     public routeFinder(){
     }
 
+    public Node getGoal(){
+        return this.goal;
+    }
+
     // Method for building shortest path from a to b.
     public void findRoute(){
+        boolean finished = false;
         this.start.setG_cost(0);
         this.start.setF_cost();
 
         this.open.add(this.start);
 
-        Node currentNode = this.start;
 
-        while (!currentNode.getIsGoal()){
+
+        int counter = 0;
+        while (!finished){
+            counter ++;
             if(this.open.size() == 0){
+                System.out.println(counter);
                 throw new IllegalStateException("Open list is empty.");
+
             }
 
-            currentNode = this.open.get(0);
+            Node currentNode = this.open.remove(0);
+            if(currentNode.getX()==18 && currentNode.getY()==3){
+
+            }
+
             this.closed.add(currentNode);
 
             if(currentNode.getIsGoal()){
+                finished = true;
                 System.out.println("Victory!");
-                break;
+
+
             }
+            findSuccersors(currentNode);
+
+
+
+            for(Node c: currentNode.getChildren()){
+
+                //currentNode.addChild(c);
+
+                if (!this.open.contains(c) && !this.closed.contains(c)){
+                    c.setParent(currentNode);
+                    c.setG_cost(currentNode.getG_cost()+c.getMoveCost());
+                    c.setF_cost();
+
+                    this.open.add(c);
+                    Collections.sort(this.open);
+                }
+                // Have to change when different g-costs on nodes.
+                else if(currentNode.getG_cost() + c.getMoveCost() < c.getG_cost()){
+                    c.setParent(currentNode);
+                    // Change this when different g-gosts.
+                    c.setG_cost(currentNode.getG_cost()+c.getMoveCost());
+                    c.setF_cost();
+                    if(closed.contains(c)){
+                        ppi(c);
+                    }
+                }
+            }
+
 
 
         }
 
+
     }
+    // Method for updating g-costs on child-nodes.
+    public void ppi(Node node){
+        for (Node c: node.getChildren()){
+            // Need to change for weighted g-costs in nodes.
+            if (node.getG_cost() + c.getMoveCost() < c.getG_cost()){
+                c.setParent(node);
+                // Need to change
+                c.setG_cost(node.getG_cost()+c.getMoveCost());
+                c.setF_cost();
+                // Recursive call to update every node's children.
+                ppi(c);
+            }
+        }
+    }
+
     //Method for finding the succesors of a node and add them to the respective node's children list.
     public void findSuccersors(Node node){
 
@@ -89,7 +148,6 @@ public class routeFinder {
         }
 
     }
-
 
     // Method for reading a file and creating a scanner object on this file.
     public Scanner readFile(String url){
@@ -171,6 +229,18 @@ public class routeFinder {
 
         return xDiff+yDiff;
     }
+    public void returnShortestPath(Node node){
+
+        if(node.getIsGoal()){
+            returnShortestPath(node.getParent());
+        }else if(node.getParent().getIsStart()){
+            node.setBoardchar('$');
+        }else{
+            node.setBoardchar('$');
+            returnShortestPath(node.getParent());
+        }
+
+    }
 
 
 
@@ -180,10 +250,11 @@ public class routeFinder {
 
     public static void main(String args[]){
         routeFinder test = new routeFinder();
-        test.buildBoard(test.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-1-2.txt"));
+        test.buildBoard(test.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-2-4.txt"));
         test.setHcost();
+        test.findRoute();
+        test.returnShortestPath(test.getGoal());
         System.out.println(test.boardToString());
-        System.out.println(test.board.get(0).get(0).getG_cost());
 
 
     }
