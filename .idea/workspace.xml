@@ -523,7 +523,7 @@
       <workItem from="1443179413454" duration="5869000" />
       <workItem from="1443537922591" duration="37639000" />
       <workItem from="1443864001627" duration="3589000" />
-      <workItem from="1443970987010" duration="5975000" />
+      <workItem from="1443970987010" duration="5979000" />
     </task>
     <task id="LOCAL-00001" summary="Add findroute-routine and clean code.">
       <created>1443704866620</created>
@@ -555,11 +555,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443977149550</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="realized that we suck ass at programming and fixed this.">
+      <created>1443977154257</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1443977154257</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53072000" />
+    <option name="totallyTimeSpent" value="53076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
