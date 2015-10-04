@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
@@ -20,7 +21,7 @@ public class boardVisualization extends Application {
 
 
     public GridPane buildGrid(){
-        routefinder.buildBoard(routefinder.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-1-1.txt"));
+        routefinder.buildBoard(routefinder.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-2-1.txt"));
         ArrayList<ArrayList<Node>> board = routefinder.getBoard();
 
         GridPane grid = new GridPane();
@@ -30,24 +31,31 @@ public class boardVisualization extends Application {
         for (int i = 0; i < board.size(); i++) {
             ArrayList<Node> currentList = board.get(i);
             grid.addRow(i);
-            System.out.println("Number of rows: "+i);
+
             for (int j = 0; j < currentList.size(); j++) {
 
                 grid.addColumn(j);
                 Node currentNode = currentList.get(j);
                 Label currentLabel = createLabel(currentNode);
                 grid.add(currentLabel, currentNode.getX(), currentNode.getY());
-                System.out.println("CurrentNode coordinates: "+currentNode.getX()+","+currentNode.getY());
+
 
             }
 
         }
+
+        grid.setStyle("-fx-stroke: black");
+        grid.setStyle("-fx-stroke-width: 2");
+
         return grid;
 
     }
 
     public Label createLabel(Node node){
         Label newLabel = new Label();
+        newLabel.setPrefSize(20,20);
+        newLabel.setStyle("-fx-background-color: black");
+        newLabel.setStyle("-fx-border-width: 1");
 
         switch (node.getBoardchar()){
             case '.': newLabel.setStyle("-fx-background-color: white");
@@ -69,6 +77,7 @@ public class boardVisualization extends Application {
             case 'r': newLabel.setStyle("-fx-background-color: brown");
                 break;
         }
+
         return newLabel;
     }
 
@@ -80,6 +89,8 @@ public class boardVisualization extends Application {
     public void start(Stage primaryStage) {
         GridPane grid = buildGrid();
         System.out.println(grid.toString());
+        grid.setGridLinesVisible(true);
+        grid.setStyle("-fx-stroke: black");
         Group root = new Group(grid);
         Scene scene = new Scene(root);
         grid.setAlignment(Pos.CENTER);
