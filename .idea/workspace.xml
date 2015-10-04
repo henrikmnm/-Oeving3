@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6749db0-6145-44de-a090-d152a94e8ea2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boardVisualization.java" afterPath="$PROJECT_DIR$/src/boardVisualization.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="øving3.iws" />
@@ -90,7 +89,7 @@
       <file leaf-file-name="boardVisualization.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/boardVisualization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7386364">
+            <state vertical-scroll-proportion="1.25">
               <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -550,7 +549,7 @@
       <updated>1443179408917</updated>
       <workItem from="1443179413454" duration="5869000" />
       <workItem from="1443537922591" duration="37639000" />
-      <workItem from="1443864001627" duration="851000" />
+      <workItem from="1443864001627" duration="972000" />
     </task>
     <task id="LOCAL-00001" summary="Add findroute-routine and clean code.">
       <created>1443704866620</created>
@@ -564,11 +563,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443794314943</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Visualization fixed.">
+      <created>1443967417691</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1443967417691</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44359000" />
+    <option name="totallyTimeSpent" value="44480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -614,7 +619,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add findroute-routine and clean code." />
     <MESSAGE value="Try to fix visualization." />
-    <option name="LAST_COMMIT_MESSAGE" value="Try to fix visualization." />
+    <MESSAGE value="Visualization fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Visualization fixed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,7 +870,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/boardVisualization.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7386364">
+        <state vertical-scroll-proportion="1.25">
           <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
