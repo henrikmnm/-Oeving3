@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6749db0-6145-44de-a090-d152a94e8ea2" name="Default" comment="Changed name of Node-class to mapNode.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/øving3/Node.class" afterPath="" />
+    <list default="true" id="c6749db0-6145-44de-a090-d152a94e8ea2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/øving3/boardVisualization.class" afterPath="$PROJECT_DIR$/out/production/øving3/boardVisualization.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/øving3/routeFinder.class" afterPath="$PROJECT_DIR$/out/production/øving3/routeFinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boardVisualization.java" afterPath="$PROJECT_DIR$/src/boardVisualization.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapNode.java" afterPath="$PROJECT_DIR$/src/mapNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routeFinder.java" afterPath="$PROJECT_DIR$/src/routeFinder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="øving3.iws" />
@@ -527,7 +523,7 @@
       <workItem from="1443179413454" duration="5869000" />
       <workItem from="1443537922591" duration="37639000" />
       <workItem from="1443864001627" duration="3589000" />
-      <workItem from="1443970987010" duration="5944000" />
+      <workItem from="1443970987010" duration="5975000" />
     </task>
     <task id="LOCAL-00001" summary="Add findroute-routine and clean code.">
       <created>1443704866620</created>
@@ -553,11 +549,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443971913502</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="realized that we suck ass at programming and fixed this.">
+      <created>1443977149550</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1443977149550</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53041000" />
+    <option name="totallyTimeSpent" value="53072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -605,7 +607,8 @@
     <MESSAGE value="Try to fix visualization." />
     <MESSAGE value="Visualization fixed." />
     <MESSAGE value="Changed name of Node-class to mapNode." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed name of Node-class to mapNode." />
+    <MESSAGE value="realized that we suck ass at programming and fixed this." />
+    <option name="LAST_COMMIT_MESSAGE" value="realized that we suck ass at programming and fixed this." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
