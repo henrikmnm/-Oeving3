@@ -18,6 +18,7 @@ public class mapNode {
     private int x;
     private int y;
     private char boardchar;
+    private char routeChar;
     private mapNode parent;
     private ArrayList<mapNode> children = new ArrayList<mapNode>();
 
@@ -128,6 +129,14 @@ public class mapNode {
 
     public char getBoardchar(){
         return this.boardchar;
+    }
+
+    public char getRouteChar() {
+        return routeChar;
+    }
+
+    public void setRouteChar(char routeChar) {
+        this.routeChar = routeChar;
     }
 
     public boolean getIsGoal(){

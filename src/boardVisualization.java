@@ -26,7 +26,10 @@ public class boardVisualization extends Application {
 
     // Method for creating a grid and adding all of the board-nodes to it with the correct colour.
     public GridPane buildGrid(){
-        routefinder.buildBoard(routefinder.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-2-1.txt"));
+        routefinder.buildBoard(routefinder.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-1-1.txt"));
+        routefinder.setHcost();
+        routefinder.findRoute(1);
+        routefinder.returnShortestPath(routefinder.getGoal());
         ArrayList<ArrayList<mapNode>> board = routefinder.getBoard();
 
         GridPane grid = new GridPane();
@@ -64,7 +67,7 @@ public class boardVisualization extends Application {
         newLabel.setStyle("-fx-border-width: 2");
 
         switch (node.getBoardchar()){
-            case '.': newLabel.setStyle("-fx-background-color: white");
+            case '.': newLabel.setStyle("-fx-background-color: white"); if(routefinder.getOpen().contains(node))newLabel.setText("O"); if(routefinder.getClosed().contains(node))newLabel.setText("C"); if(node.getRouteChar() == '$')newLabel.setText("X");
                 break;
             case '#': newLabel.setStyle("-fx-background-color: black");
                 break;
@@ -72,15 +75,15 @@ public class boardVisualization extends Application {
                 break;
             case 'B': newLabel.setStyle("-fx-background-color: turquoise"); newLabel.setText("B"); newLabel.setTextAlignment(TextAlignment.CENTER);
                 break;
-            case 'w': newLabel.setStyle("-fx-background-color: dodgerblue");
+            case 'w': newLabel.setStyle("-fx-background-color: dodgerblue");  if(routefinder.getOpen().contains(node))newLabel.setText("O"); if(routefinder.getClosed().contains(node))newLabel.setText("C"); if(node.getRouteChar() == '$')newLabel.setText("X");
                 break;
-            case 'm': newLabel.setStyle("-fx-background-color: grey");
+            case 'm': newLabel.setStyle("-fx-background-color: grey");  if(routefinder.getOpen().contains(node))newLabel.setText("O"); if(routefinder.getClosed().contains(node))newLabel.setText("C"); if(node.getRouteChar() == '$')newLabel.setText("X");
                 break;
-            case 'f': newLabel.setStyle("-fx-background-color: darkgreen");
+            case 'f': newLabel.setStyle("-fx-background-color: darkgreen");  if(routefinder.getOpen().contains(node))newLabel.setText("O"); if(routefinder.getClosed().contains(node))newLabel.setText("C"); if(node.getRouteChar() == '$')newLabel.setText("X");
                 break;
-            case 'g': newLabel.setStyle("-fx-background-color: lightgreen");
+            case 'g': newLabel.setStyle("-fx-background-color: lightgreen");  if(routefinder.getOpen().contains(node))newLabel.setText("O"); if(routefinder.getClosed().contains(node))newLabel.setText("C"); if(node.getRouteChar() == '$')newLabel.setText("X");
                 break;
-            case 'r': newLabel.setStyle("-fx-background-color: brown");
+            case 'r': newLabel.setStyle("-fx-background-color: brown");  if(routefinder.getOpen().contains(node))newLabel.setText("O"); if(routefinder.getClosed().contains(node))newLabel.setText("C"); if(node.getRouteChar() == '$')newLabel.setText("X");
                 break;
 
         }
@@ -88,26 +91,7 @@ public class boardVisualization extends Application {
         return newLabel;
     }
 
-    public void setRoute(GridPane grid){
-        routefinder.findRoute(1);
-        routefinder.returnShortestPath(routefinder.getGoal());
 
-        ArrayList<ArrayList<mapNode>> board = routefinder.getBoard();
-
-        for (int i = 0; i < board.size(); i++) {
-
-            ArrayList<mapNode> currentList = board.get(i);
-
-            for (int j = 0; j < currentList.size(); j++) {
-
-                mapNode currentNode = currentList.get(j);
-
-                switch (currentNode.getBoardchar()){
-                    case '$': Node node = getNodeFromGridPane(grid, currentNode.getX(), currentNode.getY());
-                }
-            }
-        }
-    }
 
 
 
@@ -117,6 +101,7 @@ public class boardVisualization extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
         GridPane grid = buildGrid();
         System.out.println(grid.toString());
         grid.setHgap(1);
@@ -126,18 +111,11 @@ public class boardVisualization extends Application {
         Scene scene = new Scene(root);
         grid.setAlignment(Pos.CENTER);
 
+
+        System.out.println("Total weight: "+routefinder.getTotalWeight());
         primaryStage.setTitle("Board Visualization.");
         primaryStage.setScene(scene);
         primaryStage.show();
 
-    }
-
-    private Node getNodeFromGridPane(GridPane gridPane, int col, int row) {
-        for (javafx.scene.Node node : gridPane.getChildren()) {
-            if (GridPane.getColumnIndex(node) == col && GridPane.getRowIndex(node) == row) {
-                return node;
-            }
-        }
-        return null;
     }
 }

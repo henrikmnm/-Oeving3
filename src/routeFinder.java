@@ -12,6 +12,7 @@ public class routeFinder implements Comparator<mapNode>{
     private mapNode start;
     private mapNode goal;
     private ArrayList<mapNode> open = new ArrayList<mapNode>();
+    private int totalWeight;
 
     private ArrayList<mapNode> closed = new ArrayList<mapNode>();
 
@@ -235,15 +236,37 @@ public class routeFinder implements Comparator<mapNode>{
     }
     public void returnShortestPath(mapNode mapNode){
 
+
         if(mapNode.getIsGoal()){
             returnShortestPath(mapNode.getParent());
+
         }else if(mapNode.getParent().getIsStart()){
-            mapNode.setBoardchar('$');
+            this.totalWeight += mapNode.getMoveCost();
+            mapNode.setRouteChar('$');
         }else{
-            mapNode.setBoardchar('$');
+            mapNode.setRouteChar('$');
+            this.totalWeight += mapNode.getMoveCost();
             returnShortestPath(mapNode.getParent());
+
         }
 
+
+    }
+
+    public ArrayList<mapNode> getOpen() {
+        return open;
+    }
+
+    public void setOpen(ArrayList<mapNode> open) {
+        this.open = open;
+    }
+
+    public ArrayList<mapNode> getClosed() {
+        return closed;
+    }
+
+    public void setClosed(ArrayList<mapNode> closed) {
+        this.closed = closed;
     }
 
     public ArrayList<ArrayList<mapNode>> getBoard(){
@@ -272,12 +295,16 @@ public class routeFinder implements Comparator<mapNode>{
 
     };
 
+    public int getTotalWeight(){
+        return this.totalWeight;
+    }
+
 
 /*    public static void main(String args[]){
         routeFinder test = new routeFinder();
         test.buildBoard(test.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-2-4.txt"));
         test.setHcost();
-        test.findRoute();
+        test.findRoute(1);
         test.returnShortestPath(test.getGoal());
         System.out.println(test.boardToString());
 

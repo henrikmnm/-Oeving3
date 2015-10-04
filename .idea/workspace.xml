@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6749db0-6145-44de-a090-d152a94e8ea2" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Node.java" afterPath="$PROJECT_DIR$/src/mapNode.java" />
+    <list default="true" id="c6749db0-6145-44de-a090-d152a94e8ea2" name="Default" comment="Changed name of Node-class to mapNode.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/øving3/Node.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/øving3/boardVisualization.class" afterPath="$PROJECT_DIR$/out/production/øving3/boardVisualization.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/øving3/routeFinder.class" afterPath="$PROJECT_DIR$/out/production/øving3/routeFinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boardVisualization.java" afterPath="$PROJECT_DIR$/src/boardVisualization.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mapNode.java" afterPath="$PROJECT_DIR$/src/mapNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routeFinder.java" afterPath="$PROJECT_DIR$/src/routeFinder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,36 +35,49 @@
         <entry file="file://$PROJECT_DIR$/src/mapNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="128" column="30" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
+              <caret line="133" column="32" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
               <folding>
-                <element signature="e#2407#2408#0" expanded="true" />
-                <element signature="e#2444#2445#0" expanded="true" />
+                <element signature="e#2435#2436#0" expanded="true" />
+                <element signature="e#2472#2473#0" expanded="true" />
+                <element signature="e#2538#2539#0" expanded="true" />
+                <element signature="e#2586#2587#0" expanded="true" />
+                <element signature="e#2628#2629#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routeFinder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routeFinder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routeFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.45454547">
+              <caret line="292" column="50" selection-start-line="292" selection-start-column="50" selection-end-line="292" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#243#263#0" expanded="true" />
                 <element signature="method#findSuccersors#0;class#routeFinder#0" expanded="false" />
-                <element signature="e#7869#7870#0" expanded="true" />
-                <element signature="e#7931#7932#0" expanded="true" />
+                <element signature="e#7745#7746#0" expanded="true" />
+                <element signature="e#7772#7773#0" expanded="true" />
+                <element signature="e#7824#7825#0" expanded="true" />
+                <element signature="e#7856#7857#0" expanded="true" />
+                <element signature="e#7901#7902#0" expanded="true" />
+                <element signature="e#7930#7931#0" expanded="true" />
+                <element signature="e#7986#7987#0" expanded="true" />
+                <element signature="e#8022#8023#0" expanded="true" />
+                <element signature="e#8332#8333#0" expanded="true" />
+                <element signature="e#8394#8395#0" expanded="true" />
+                <element signature="e#8640#8641#0" expanded="true" />
+                <element signature="e#8679#8680#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="boardVisualization.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="boardVisualization.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/boardVisualization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05970149">
-              <caret line="105" column="109" selection-start-line="105" selection-start-column="109" selection-end-line="105" selection-end-column="109" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="131" selection-start-line="28" selection-start-column="131" selection-end-line="28" selection-end-column="131" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,9 +130,9 @@
         <option value="$PROJECT_DIR$/src/boards/Coordinates.java" />
         <option value="$PROJECT_DIR$/src/Coordinates.java" />
         <option value="$PROJECT_DIR$/src/Node.java" />
-        <option value="$PROJECT_DIR$/src/routeFinder.java" />
         <option value="$PROJECT_DIR$/src/mapNode.java" />
         <option value="$PROJECT_DIR$/src/boardVisualization.java" />
+        <option value="$PROJECT_DIR$/src/routeFinder.java" />
       </list>
     </option>
   </component>
@@ -512,7 +527,7 @@
       <workItem from="1443179413454" duration="5869000" />
       <workItem from="1443537922591" duration="37639000" />
       <workItem from="1443864001627" duration="3589000" />
-      <workItem from="1443970987010" duration="858000" />
+      <workItem from="1443970987010" duration="5944000" />
     </task>
     <task id="LOCAL-00001" summary="Add findroute-routine and clean code.">
       <created>1443704866620</created>
@@ -532,11 +547,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443967417691</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed name of Node-class to mapNode.">
+      <created>1443971913502</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1443971913502</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47955000" />
+    <option name="totallyTimeSpent" value="53041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -544,11 +565,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24622357" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -558,14 +581,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -583,7 +604,8 @@
     <MESSAGE value="Add findroute-routine and clean code." />
     <MESSAGE value="Try to fix visualization." />
     <MESSAGE value="Visualization fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Visualization fixed." />
+    <MESSAGE value="Changed name of Node-class to mapNode." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed name of Node-class to mapNode." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -601,8 +623,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
           <folding>
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2444#2445#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2472#2473#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -615,8 +640,18 @@
             <element signature="imports" expanded="true" />
             <element signature="e#243#263#0" expanded="true" />
             <element signature="method#findSuccersors#0;class#routeFinder#0" expanded="false" />
-            <element signature="e#7869#7870#0" expanded="true" />
-            <element signature="e#7931#7932#0" expanded="true" />
+            <element signature="e#7745#7746#0" expanded="true" />
+            <element signature="e#7772#7773#0" expanded="true" />
+            <element signature="e#7824#7825#0" expanded="true" />
+            <element signature="e#7856#7857#0" expanded="true" />
+            <element signature="e#7901#7902#0" expanded="true" />
+            <element signature="e#7930#7931#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8022#8023#0" expanded="true" />
+            <element signature="e#8332#8333#0" expanded="true" />
+            <element signature="e#8394#8395#0" expanded="true" />
+            <element signature="e#8640#8641#0" expanded="true" />
+            <element signature="e#8679#8680#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -652,8 +687,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
           <folding>
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2444#2445#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2472#2473#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -666,8 +704,18 @@
             <element signature="imports" expanded="true" />
             <element signature="e#243#263#0" expanded="true" />
             <element signature="method#findSuccersors#0;class#routeFinder#0" expanded="false" />
-            <element signature="e#7869#7870#0" expanded="true" />
-            <element signature="e#7931#7932#0" expanded="true" />
+            <element signature="e#7745#7746#0" expanded="true" />
+            <element signature="e#7772#7773#0" expanded="true" />
+            <element signature="e#7824#7825#0" expanded="true" />
+            <element signature="e#7856#7857#0" expanded="true" />
+            <element signature="e#7901#7902#0" expanded="true" />
+            <element signature="e#7930#7931#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8022#8023#0" expanded="true" />
+            <element signature="e#8332#8333#0" expanded="true" />
+            <element signature="e#8394#8395#0" expanded="true" />
+            <element signature="e#8640#8641#0" expanded="true" />
+            <element signature="e#8679#8680#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -703,8 +751,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2444#2445#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2472#2473#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -717,17 +768,19 @@
             <element signature="imports" expanded="true" />
             <element signature="e#243#263#0" expanded="true" />
             <element signature="method#findSuccersors#0;class#routeFinder#0" expanded="false" />
-            <element signature="e#7869#7870#0" expanded="true" />
-            <element signature="e#7931#7932#0" expanded="true" />
+            <element signature="e#7745#7746#0" expanded="true" />
+            <element signature="e#7772#7773#0" expanded="true" />
+            <element signature="e#7824#7825#0" expanded="true" />
+            <element signature="e#7856#7857#0" expanded="true" />
+            <element signature="e#7901#7902#0" expanded="true" />
+            <element signature="e#7930#7931#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8022#8023#0" expanded="true" />
+            <element signature="e#8332#8333#0" expanded="true" />
+            <element signature="e#8394#8395#0" expanded="true" />
+            <element signature="e#8640#8641#0" expanded="true" />
+            <element signature="e#8679#8680#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Coordinates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,34 +795,55 @@
     <entry file="file://$PROJECT_DIR$/src/mapNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="30" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
+          <caret line="133" column="32" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
           <folding>
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2444#2445#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2472#2473#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Coordinates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/boardVisualization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="131" selection-start-line="28" selection-start-column="131" selection-end-line="28" selection-end-column="131" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routeFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.45454547">
+          <caret line="292" column="50" selection-start-line="292" selection-start-column="50" selection-end-line="292" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#243#263#0" expanded="true" />
             <element signature="method#findSuccersors#0;class#routeFinder#0" expanded="false" />
-            <element signature="e#7869#7870#0" expanded="true" />
-            <element signature="e#7931#7932#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boardVisualization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05970149">
-          <caret line="105" column="109" selection-start-line="105" selection-start-column="109" selection-end-line="105" selection-end-column="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#7745#7746#0" expanded="true" />
+            <element signature="e#7772#7773#0" expanded="true" />
+            <element signature="e#7824#7825#0" expanded="true" />
+            <element signature="e#7856#7857#0" expanded="true" />
+            <element signature="e#7901#7902#0" expanded="true" />
+            <element signature="e#7930#7931#0" expanded="true" />
+            <element signature="e#7986#7987#0" expanded="true" />
+            <element signature="e#8022#8023#0" expanded="true" />
+            <element signature="e#8332#8333#0" expanded="true" />
+            <element signature="e#8394#8395#0" expanded="true" />
+            <element signature="e#8640#8641#0" expanded="true" />
+            <element signature="e#8679#8680#0" expanded="true" />
           </folding>
         </state>
       </provider>
