@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6749db0-6145-44de-a090-d152a94e8ea2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/øving3/boardVisualization.class" afterPath="$PROJECT_DIR$/out/production/øving3/boardVisualization.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Node.java" afterPath="$PROJECT_DIR$/src/Node.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boardVisualization.java" afterPath="$PROJECT_DIR$/src/boardVisualization.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routeFinder.java" afterPath="$PROJECT_DIR$/src/routeFinder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/øving3/Node.class" afterPath="$PROJECT_DIR$/out/production/øving3/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/øving3/routeFinder.class" afterPath="$PROJECT_DIR$/out/production/øving3/routeFinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="øving3.iws" />
@@ -69,7 +65,7 @@
       <file leaf-file-name="boardVisualization.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/boardVisualization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5993031" vertical-offset="1067" max-vertical-offset="1785">
+            <state vertical-scroll-proportion="0.88814694" vertical-offset="879" max-vertical-offset="1785">
               <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -519,7 +515,7 @@
       <workItem from="1443179413454" duration="5869000" />
       <workItem from="1443537922591" duration="37639000" />
       <workItem from="1443864001627" duration="972000" />
-      <workItem from="1443968159630" duration="2198000" />
+      <workItem from="1443968159630" duration="2396000" />
     </task>
     <task id="LOCAL-00001" summary="Add findroute-routine and clean code.">
       <created>1443704866620</created>
@@ -539,15 +535,21 @@
       <option name="project" value="LOCAL" />
       <updated>1443967417691</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added different sort methods">
+      <created>1443970389513</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1443970389513</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46678000" />
+    <option name="totallyTimeSpent" value="46876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -560,8 +562,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35546038" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937685" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35546038" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32869378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2457356" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -596,7 +598,8 @@
     <MESSAGE value="Add findroute-routine and clean code." />
     <MESSAGE value="Try to fix visualization." />
     <MESSAGE value="Visualization fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Visualization fixed." />
+    <MESSAGE value="added different sort methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="added different sort methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -791,7 +794,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/boardVisualization.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5993031" vertical-offset="1067" max-vertical-offset="1785">
+        <state vertical-scroll-proportion="0.88814694" vertical-offset="879" max-vertical-offset="1785">
           <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
