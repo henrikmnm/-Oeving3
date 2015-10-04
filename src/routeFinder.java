@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Created by henrikmnm on 28.09.15.
  */
-public class routeFinder {
+public class routeFinder implements Comparator<Node>{
 
     private ArrayList<ArrayList<Node>> board = new ArrayList<ArrayList<Node>>();
     private Node start;
@@ -24,7 +24,7 @@ public class routeFinder {
     }
 
     // Method for building shortest path from a to b.
-    public void findRoute(){
+    public void findRoute(int algorithm){
         boolean finished = false;
         this.start.setG_cost(0);
         this.start.setF_cost();
@@ -69,7 +69,10 @@ public class routeFinder {
                     c.setF_cost();
 
                     this.open.add(c);
-                    Collections.sort(this.open);
+                    if(algorithm == 1)
+                        Collections.sort(this.open, compareF);
+                    if(algorithm == 3)
+                        Collections.sort(this.open, compareG);
                 }
                 // Have to change when different g-costs on nodes.
                 else if(currentNode.getG_cost() + c.getMoveCost() < c.getG_cost()){
@@ -89,6 +92,7 @@ public class routeFinder {
 
 
     }
+
     // Method for updating g-costs on child-nodes.
     public void ppi(Node node){
         for (Node c: node.getChildren()){
@@ -196,7 +200,7 @@ public class routeFinder {
                 Node currentNode = currentList.get(j);
                 boardString += currentNode.toString();
 
-            }
+                }
             boardString += "\n";
         }
         return boardString;
@@ -247,7 +251,26 @@ public class routeFinder {
     }
 
 
+    @Override
+    public int compare(Node o1, Node o2) {
+        return 0;
+    }
 
+    Comparator<Node> compareF = new Comparator<Node>() {
+        @Override
+        public int compare(Node o1, Node o2){
+            return o1.getF_cost() - o2.getF_cost();
+        }
+
+    };
+
+    Comparator<Node> compareG = new Comparator<Node>() {
+        @Override
+        public int compare(Node o1, Node o2){
+            return o1.getG_cost() - o2.getG_cost();
+        }
+
+    };
 
 
 /*    public static void main(String args[]){

@@ -21,7 +21,7 @@ public class boardVisualization extends Application {
 
 
     public GridPane buildGrid(){
-        routefinder.buildBoard(routefinder.readFile("/Users/olanordmann/Documents/Skole/5. Semester/AI/Øvinger/øving3/src/board-2-1.txt"));
+        routefinder.buildBoard(routefinder.readFile("C:\\Users\\Fincken\\OneDrive\\_NTNU\\AI\\O3\\-Oeving3\\src\\board-1-1.txt"));
         ArrayList<ArrayList<Node>> board = routefinder.getBoard();
 
         GridPane grid = new GridPane();

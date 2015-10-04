@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 /**
  * Created by henrikmnm on 25.09.15.
@@ -6,7 +7,7 @@ import java.util.ArrayList;
  *
  * Class to provide a Node-interface.
  */
-public class Node implements Comparable<Node>{
+public class Node {
 
     private boolean passable = true;
     private boolean isStart = false;
@@ -140,8 +141,7 @@ public class Node implements Comparable<Node>{
     }
 
 
-    @Override
-    public int compareTo(Node o) {
-        return this.f_cost - o.getF_cost();
-    }
+
+
+
 }
