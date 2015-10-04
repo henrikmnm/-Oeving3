@@ -1,13 +1,12 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 
 /**
  * Created by henrikmnm on 25.09.15.
  *
  *
- * Class to provide a Node-interface.
+ * Class to provide a mapNode-interface.
  */
-public class Node {
+public class mapNode {
 
     private boolean passable = true;
     private boolean isStart = false;
@@ -19,10 +18,10 @@ public class Node {
     private int x;
     private int y;
     private char boardchar;
-    private Node parent;
-    private ArrayList<Node> children = new ArrayList<Node>();
+    private mapNode parent;
+    private ArrayList<mapNode> children = new ArrayList<mapNode>();
 
-    public Node (char c, int x, int y){
+    public mapNode(char c, int x, int y){
 
         this.boardchar = c;
         this.x = x;
@@ -99,11 +98,11 @@ public class Node {
         return this.passable;
     }
 
-    public Node getParent() {
+    public mapNode getParent() {
         return parent;
     }
 
-    public void setParent(Node parent) {
+    public void setParent(mapNode parent) {
         this.parent = parent;
     }
 
@@ -119,7 +118,7 @@ public class Node {
         this.moveCost = moveCost;
     }
 
-    public ArrayList<Node> getChildren() {
+    public ArrayList<mapNode> getChildren() {
         return children;
     }
 
@@ -136,8 +135,8 @@ public class Node {
     }
 
 
-    public void addChild(Node node){
-        this.children.add(node);
+    public void addChild(mapNode mapNode){
+        this.children.add(mapNode);
     }
 
 

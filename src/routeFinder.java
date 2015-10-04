@@ -6,20 +6,20 @@ import java.util.*;
 /**
  * Created by henrikmnm on 28.09.15.
  */
-public class routeFinder implements Comparator<Node>{
+public class routeFinder implements Comparator<mapNode>{
 
-    private ArrayList<ArrayList<Node>> board = new ArrayList<ArrayList<Node>>();
-    private Node start;
-    private Node goal;
-    private ArrayList<Node> open = new ArrayList<Node>();
+    private ArrayList<ArrayList<mapNode>> board = new ArrayList<ArrayList<mapNode>>();
+    private mapNode start;
+    private mapNode goal;
+    private ArrayList<mapNode> open = new ArrayList<mapNode>();
 
-    private ArrayList<Node> closed = new ArrayList<Node>();
+    private ArrayList<mapNode> closed = new ArrayList<mapNode>();
 
     // Empty constructor for accessing methods.
     public routeFinder(){
     }
 
-    public Node getGoal(){
+    public mapNode getGoal(){
         return this.goal;
     }
 
@@ -42,30 +42,30 @@ public class routeFinder implements Comparator<Node>{
 
             }
 
-            Node currentNode = this.open.remove(0);
-            if(currentNode.getX()==18 && currentNode.getY()==3){
+            mapNode currentMapNode = this.open.remove(0);
+            if(currentMapNode.getX()==18 && currentMapNode.getY()==3){
 
             }
 
-            this.closed.add(currentNode);
+            this.closed.add(currentMapNode);
 
-            if(currentNode.getIsGoal()){
+            if(currentMapNode.getIsGoal()){
                 finished = true;
                 System.out.println("Victory!");
 
 
             }
-            findSuccersors(currentNode);
+            findSuccersors(currentMapNode);
 
 
 
-            for(Node c: currentNode.getChildren()){
+            for(mapNode c: currentMapNode.getChildren()){
 
-                //currentNode.addChild(c);
+                //currentMapNode.addChild(c);
 
                 if (!this.open.contains(c) && !this.closed.contains(c)){
-                    c.setParent(currentNode);
-                    c.setG_cost(currentNode.getG_cost()+c.getMoveCost());
+                    c.setParent(currentMapNode);
+                    c.setG_cost(currentMapNode.getG_cost()+c.getMoveCost());
                     c.setF_cost();
 
                     this.open.add(c);
@@ -75,10 +75,10 @@ public class routeFinder implements Comparator<Node>{
                         Collections.sort(this.open, compareG);
                 }
                 // Have to change when different g-costs on nodes.
-                else if(currentNode.getG_cost() + c.getMoveCost() < c.getG_cost()){
-                    c.setParent(currentNode);
+                else if(currentMapNode.getG_cost() + c.getMoveCost() < c.getG_cost()){
+                    c.setParent(currentMapNode);
                     // Change this when different g-gosts.
-                    c.setG_cost(currentNode.getG_cost()+c.getMoveCost());
+                    c.setG_cost(currentMapNode.getG_cost()+c.getMoveCost());
                     c.setF_cost();
                     if(closed.contains(c)){
                         ppi(c);
@@ -94,60 +94,60 @@ public class routeFinder implements Comparator<Node>{
     }
 
     // Method for updating g-costs on child-nodes.
-    public void ppi(Node node){
-        for (Node c: node.getChildren()){
+    public void ppi(mapNode mapNode){
+        for (mapNode c: mapNode.getChildren()){
             // Need to change for weighted g-costs in nodes.
-            if (node.getG_cost() + c.getMoveCost() < c.getG_cost()){
-                c.setParent(node);
+            if (mapNode.getG_cost() + c.getMoveCost() < c.getG_cost()){
+                c.setParent(mapNode);
                 // Need to change
-                c.setG_cost(node.getG_cost()+c.getMoveCost());
+                c.setG_cost(mapNode.getG_cost()+c.getMoveCost());
                 c.setF_cost();
-                // Recursive call to update every node's children.
+                // Recursive call to update every mapNode's children.
                 ppi(c);
             }
         }
     }
 
-    //Method for finding the succesors of a node and add them to the respective node's children list.
-    public void findSuccersors(Node node){
+    //Method for finding the succesors of a mapNode and add them to the respective mapNode's children list.
+    public void findSuccersors(mapNode mapNode){
 
-        int x = node.getX();
-        int y = node.getY();
+        int x = mapNode.getX();
+        int y = mapNode.getY();
 
         if(x == 0){
             if(this.board.get(y).get(1).getPassable()){
-                node.addChild(this.board.get(y).get(1));
+                mapNode.addChild(this.board.get(y).get(1));
             }
         }
         if(y == 0){
             if(this.board.get(1).get(x).getPassable()){
-                node.addChild(this.board.get(1).get(x));
+                mapNode.addChild(this.board.get(1).get(x));
             }
         }
         if(x == this.board.get(y).size()-1){
             if(this.board.get(y).get(x-1).getPassable()){
-                node.addChild(this.board.get(y).get(x-1));
+                mapNode.addChild(this.board.get(y).get(x-1));
             }
         }
         if(y == this.board.size()-1){
             if(this.board.get(y-1).get(x).getPassable()){
-                node.addChild(this.board.get(y-1).get(x));
+                mapNode.addChild(this.board.get(y-1).get(x));
             }
         }
         if(x > 0 && x < this.board.get(y).size()-1){
             if(this.board.get(y).get(x-1).getPassable()){
-                node.addChild(this.board.get(y).get(x-1));
+                mapNode.addChild(this.board.get(y).get(x-1));
             }
             if(this.board.get(y).get(x+1).getPassable()){
-                node.addChild(this.board.get(y).get(x+1));
+                mapNode.addChild(this.board.get(y).get(x+1));
             }
         }
         if(y>0 && y < this.board.size()-1){
             if(this.board.get(y-1).get(x).getPassable()){
-                node.addChild(this.board.get(y-1).get(x));
+                mapNode.addChild(this.board.get(y-1).get(x));
             }
             if(this.board.get(y+1).get(x).getPassable()){
-                node.addChild(this.board.get(y+1).get(x));
+                mapNode.addChild(this.board.get(y+1).get(x));
             }
         }
 
@@ -173,20 +173,20 @@ public class routeFinder implements Comparator<Node>{
         while (scanner.hasNext()){
             currentLine = scanner.nextLine();
 
-            ArrayList<Node> nodeList = new ArrayList<Node>();
+            ArrayList<mapNode> mapNodeList = new ArrayList<mapNode>();
 
             for (int i = 0; i < currentLine.length(); i++) {
-                Node newNode = new Node(currentLine.charAt(i), i, counter);
-                nodeList.add(newNode);
+                mapNode newMapNode = new mapNode(currentLine.charAt(i), i, counter);
+                mapNodeList.add(newMapNode);
                 if (currentLine.charAt(i) == 'A'){
-                    this.start = newNode;
+                    this.start = newMapNode;
                 }
                 else if (currentLine.charAt(i) == 'B'){
-                    this.goal = newNode;
+                    this.goal = newMapNode;
                 }
 
             }
-            board.add(nodeList);
+            board.add(mapNodeList);
             counter++;
         }
     }
@@ -195,10 +195,10 @@ public class routeFinder implements Comparator<Node>{
     public String boardToString(){
         String boardString = "";
         for (int i = 0; i < board.size(); i++) {
-            ArrayList<Node> currentList = board.get(i);
+            ArrayList<mapNode> currentList = board.get(i);
             for (int j = 0; j < currentList.size(); j++) {
-                Node currentNode = currentList.get(j);
-                boardString += currentNode.toString();
+                mapNode currentMapNode = currentList.get(j);
+                boardString += currentMapNode.toString();
 
                 }
             boardString += "\n";
@@ -211,11 +211,11 @@ public class routeFinder implements Comparator<Node>{
 
         for (int i = 0; i < this.board.size(); i++) {
 
-            ArrayList<Node> currentList = board.get(i);
+            ArrayList<mapNode> currentList = board.get(i);
             for (int j = 0; j < currentList.size(); j++) {
-                Node currentNode = currentList.get(j);
-                int hcost = calculateH_cost(currentNode.getX(), currentNode.getY());
-                currentNode.setH_cost(hcost);
+                mapNode currentMapNode = currentList.get(j);
+                int hcost = calculateH_cost(currentMapNode.getX(), currentMapNode.getY());
+                currentMapNode.setH_cost(hcost);
 
             }
 
@@ -233,40 +233,40 @@ public class routeFinder implements Comparator<Node>{
 
         return xDiff+yDiff;
     }
-    public void returnShortestPath(Node node){
+    public void returnShortestPath(mapNode mapNode){
 
-        if(node.getIsGoal()){
-            returnShortestPath(node.getParent());
-        }else if(node.getParent().getIsStart()){
-            node.setBoardchar('$');
+        if(mapNode.getIsGoal()){
+            returnShortestPath(mapNode.getParent());
+        }else if(mapNode.getParent().getIsStart()){
+            mapNode.setBoardchar('$');
         }else{
-            node.setBoardchar('$');
-            returnShortestPath(node.getParent());
+            mapNode.setBoardchar('$');
+            returnShortestPath(mapNode.getParent());
         }
 
     }
 
-    public ArrayList<ArrayList<Node>> getBoard(){
+    public ArrayList<ArrayList<mapNode>> getBoard(){
         return this.board;
     }
 
 
     @Override
-    public int compare(Node o1, Node o2) {
+    public int compare(mapNode o1, mapNode o2) {
         return 0;
     }
 
-    Comparator<Node> compareF = new Comparator<Node>() {
+    Comparator<mapNode> compareF = new Comparator<mapNode>() {
         @Override
-        public int compare(Node o1, Node o2){
+        public int compare(mapNode o1, mapNode o2){
             return o1.getF_cost() - o2.getF_cost();
         }
 
     };
 
-    Comparator<Node> compareG = new Comparator<Node>() {
+    Comparator<mapNode> compareG = new Comparator<mapNode>() {
         @Override
-        public int compare(Node o1, Node o2){
+        public int compare(mapNode o1, mapNode o2){
             return o1.getG_cost() - o2.getG_cost();
         }
 
