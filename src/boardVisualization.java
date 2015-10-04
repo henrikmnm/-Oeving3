@@ -80,7 +80,7 @@ public class boardVisualization extends Application {
 
         return newLabel;
     }
-
+    //hey
     public static void main(String[] args) {
         launch(args);
     }
